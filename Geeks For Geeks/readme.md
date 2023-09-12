@@ -7,3 +7,4 @@
 5. Leaders in array (right element is smaller) `O(N)`
 6. Duplicate in array `O(N)`
 7. Perfect Number `O(sqrt(N))`
+8. Sum of all divisors from 1 to n `O(N)`
