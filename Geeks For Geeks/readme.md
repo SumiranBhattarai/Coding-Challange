@@ -14,3 +14,6 @@
 12. Count pairs with given sum `O(N)`
 13. Peak Element `O(logN)`
 14. Rotate Array `O(N)`
+15. Largest Subarray with 0 Sum `O(N)`
+16. Array Subset of Another Array `O(N)`
+17. Key Pair. Is there at least 2 elements whose sum is X `O(N)`
