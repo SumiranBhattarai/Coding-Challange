@@ -8,3 +8,9 @@
 6. Duplicate in array `O(N)`
 7. Perfect Number `O(sqrt(N))`
 8. Sum of all divisors from 1 to n `O(N)`
+9. N-Divisors `O(N)`
+10. Equilibrium Point `O(N)`
+11. Second Largest Distinct Element in Array `O(N)`
+12. Count pairs with given sum `O(N)`
+13. Peak Element `O(logN)`
+14. Rotate Array `O(N)`
