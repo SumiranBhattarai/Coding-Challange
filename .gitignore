@@ -1,3 +1,5 @@
 *.exe
 temp.cpp
 temp.py
+input.txt
+output.txt

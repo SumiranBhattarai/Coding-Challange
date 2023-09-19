@@ -17,3 +17,9 @@
 15. Largest Subarray with 0 Sum `O(N)`
 16. Array Subset of Another Array `O(N)`
 17. Key Pair. Is there at least 2 elements whose sum is X `O(N)`
+18. Remove Distinct Elements from sorted Array `O(N)`
+19. Elements in union of two arrays `O(m+n)`
+20. Reverse Array in Groups `O(N)`
+21. Check 2 Array are equal of not
+22. ZigZag Array `O(N)`
+23. Subarray With 0 Sum `O(N)`
