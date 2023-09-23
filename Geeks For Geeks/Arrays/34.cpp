@@ -1,31 +1,22 @@
 #include <bits/stdc++.h>
 using namespace std;
 using namespace chrono;
+
 class Solution
 {
 public:
-    int minDist(int a[], int n, int x, int y)
+    int findKRotation(int arr[], int n)
     {
-        int mindist = INT_MAX;
-        int prev = -1;
-        for (int i = 0; i < n; i++)
+        // code here
+        int first = arr[0];
+        for (int i = 0; i < n - 1; i++)
         {
-            if (a[i] == x || a[i] == y)
-            {
-                if (prev != -1 && a[prev] != a[i])
-                {
-                    mindist = min(mindist, i - prev);
-                }
-                prev = i;
-            }
+            if (arr[i] > arr[i + 1])
+                return i + 1;
         }
-        if (mindist != INT_MAX)
-        {
-            return mindist;
-        }
-        return -1;
     }
 };
+
 int main()
 {
     // TIME START
@@ -35,15 +26,16 @@ int main()
     auto end_time = high_resolution_clock::now();
     // Code
 
-    int n;
+    int n, i;
     inputFile >> n;
     int a[n];
-    for (int i = 0; i < n; i++)
+    for (i = 0; i < n; i++)
+    {
         inputFile >> a[i];
-    int x, y;
-    inputFile >> x >> y;
-    Solution obj;
-    outputFile << obj.minDist(a, n, x, y) << endl;
+    }
+    Solution ob;
+    auto ans = ob.findKRotation(a, n);
+    outputFile << ans << "\n";
 
     // TIME END
     auto duration = duration_cast<chrono::milliseconds>(end_time - start_time);

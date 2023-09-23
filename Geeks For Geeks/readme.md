@@ -27,4 +27,10 @@
 25. First Repeating Element `O(N)`
 26. Wave Array `O(N)`
 27. Frequencies of Limited Ranged Array Elements `O(N)` #UNSOLVED
-28. Minimum distance between two numbers `O(N)`
+28. Minimum distance between two numbers `O(N)` #TIME_LIMIT_EXCEEDED
+29. Intersection of Two Arrays `O(N)`
+30. Check if array is sorted `O(N)`
+31. Union of sorted array `O(n+m)`
+32. Alternating Positive and Negative Number `O(N)`
+33. Move all zeroes to end of array `O(N)`
+34. Given an ascending sorted rotated array Arr of distinct integers of size N. The array is right rotated K times. Find the value of K.`O(log(N))`

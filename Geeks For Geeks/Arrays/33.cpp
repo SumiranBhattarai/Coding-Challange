@@ -4,26 +4,23 @@ using namespace chrono;
 class Solution
 {
 public:
-    int minDist(int a[], int n, int x, int y)
+    void pushZerosToEnd(int *arr, int n)
     {
-        int mindist = INT_MAX;
-        int prev = -1;
+        int point = 0;
+
         for (int i = 0; i < n; i++)
         {
-            if (a[i] == x || a[i] == y)
+            if (arr[i] != 0)
             {
-                if (prev != -1 && a[prev] != a[i])
-                {
-                    mindist = min(mindist, i - prev);
-                }
-                prev = i;
+                arr[point] = arr[i];
+                point++;
             }
         }
-        if (mindist != INT_MAX)
+
+        for (int i = point; i < n; i++)
         {
-            return mindist;
+            arr[i] = 0;
         }
-        return -1;
     }
 };
 int main()
@@ -35,15 +32,20 @@ int main()
     auto end_time = high_resolution_clock::now();
     // Code
 
-    int n;
+    int n, i;
     inputFile >> n;
-    int a[n];
-    for (int i = 0; i < n; i++)
-        inputFile >> a[i];
-    int x, y;
-    inputFile >> x >> y;
-    Solution obj;
-    outputFile << obj.minDist(a, n, x, y) << endl;
+    int arr[n];
+    for (i = 0; i < n; i++)
+    {
+        inputFile >> arr[i];
+    }
+    Solution ob;
+    ob.pushZerosToEnd(arr, n);
+    for (i = 0; i < n; i++)
+    {
+        outputFile << arr[i] << " ";
+    }
+    outputFile << "\n";
 
     // TIME END
     auto duration = duration_cast<chrono::milliseconds>(end_time - start_time);
