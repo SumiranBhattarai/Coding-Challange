@@ -23,3 +23,8 @@
 21. Check 2 Array are equal of not
 22. ZigZag Array `O(N)`
 23. Subarray With 0 Sum `O(N)`
+24. Longest Common Prefix `O(N*min(|arri|))`
+25. First Repeating Element `O(N)`
+26. Wave Array `O(N)`
+27. Frequencies of Limited Ranged Array Elements `O(N)` #UNSOLVED
+28. Minimum distance between two numbers `O(N)`

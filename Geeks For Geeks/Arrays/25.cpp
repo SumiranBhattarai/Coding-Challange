@@ -4,23 +4,25 @@ using namespace chrono;
 class Solution
 {
 public:
-    int remove_duplicate(int a[], int n)
+    // Function to return the position of the first repeating element.
+    int firstRepeated(int arr[], int n)
     {
         // code here
-        int distinct = 1;
-        int j = 1;
-        for (j = 1; j < n; j++)
+        map<int, int> mp;
+        int first = n;
+        for (int i = 0; i < n; i++)
         {
-            if (a[j] != a[j - 1])
+            if (mp[arr[i]])
             {
-                a[distinct] = a[j];
-                distinct++;
+                first = min(first, mp[arr[i]]);
             }
+            mp[arr[i]] = i + 1;
         }
-        return distinct;
+        if (first != n)
+            return first;
+        return -1;
     }
 };
-
 int main()
 {
     // TIME START
@@ -29,18 +31,15 @@ int main()
     auto start_time = high_resolution_clock::now();
     auto end_time = high_resolution_clock::now();
     // Code
+    int n;
+    inputFile >> n;
 
-    int N;
-    inputFile >> N;
-    int a[N];
-    for (int i = 0; i < N; i++)
-    {
-        inputFile >> a[i];
-    }
+    int arr[n];
+
+    for (int i = 0; i < n; ++i)
+        inputFile >> arr[i];
     Solution ob;
-    int n = ob.remove_duplicate(a, N);
-    outputFile << n << endl;
-
+    outputFile << ob.firstRepeated(arr, n) << "\n";
     // TIME END
     auto duration = duration_cast<chrono::milliseconds>(end_time - start_time);
     cout << "Execution Time: " << duration.count() << " milliseconds" << endl;
